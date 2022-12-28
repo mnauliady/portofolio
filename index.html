@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+      if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body class="tracking-wide">
+    <!-- navabar start -->
+    <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent">
+      <div class="container">
+        <div class="relative flex items-center justify-between">
+          <div class="px-4">
+            <!-- <a href="#home" class="block py-6 text-lg font-bold text-primary"></a> -->
+          </div>
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="hamburger" type="button" class="absolute top-2 right-4 block lg:hidden">
+              <span class="hamburger-line origin-bottom-left transition duration-300"></span>
+              <span class="hamburger-line transition duration-300"></span>
+              <span class="hamburger-line origin-bottom-left transition duration-300"></span>
+            </button>
+            <nav id="nav-menu" class="absolute right-4 top-12 hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg brightness-105 dark:bg-dark dark:shadow-gray-800 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent">
+              <ul class="block lg:flex">
+                <li class="group transition duration-300 hover:translate-x-1 lg:hover:-translate-y-1">
+                  <a href="#home" class="mx-8 flex py-2 text-base text-dark group-hover:text-secondary dark:text-white lg:font-semibold">Home</a>
+                </li>
+                <li class="group transition duration-300 hover:translate-x-1 lg:hover:-translate-y-1">
+                  <a href="#about" class="mx-8 flex py-2 text-base text-dark group-hover:text-secondary dark:text-white lg:font-semibold">About</a>
+                </li>
+                <li class="group transition duration-300 hover:translate-x-1 lg:hover:-translate-y-1">
+                  <a href="#resume" class="mx-8 flex py-2 text-base text-dark group-hover:text-secondary dark:text-white lg:font-semibold">Resume</a>
+                </li>
+                <li class="group transition duration-300 hover:translate-x-1 lg:hover:-translate-y-1">
+                  <a href="#skill" class="mx-8 flex py-2 text-base text-dark group-hover:text-secondary dark:text-white lg:font-semibold">Skill</a>
+                </li>
+                <li class="group transition duration-300 hover:translate-x-1 lg:hover:-translate-y-1">
+                  <a href="#portofolio" class="mx-8 flex py-2 text-base text-dark group-hover:text-secondary dark:text-white lg:font-semibold">Portofolio</a>
+                </li>
+                <li class="group transition duration-300 hover:translate-x-1 lg:hover:-translate-y-1">
+                  <a href="#contact" class="mx-8 flex py-2 text-base text-dark group-hover:text-secondary dark:text-white lg:font-semibold">Contact</a>
+                </li>
+                <li class="mt-3 flex items-center pl-8 md:mt-0">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-dark dark:text-white lg:text-base">light</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-gray-400 p-1">
+                        <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-dark dark:text-white lg:text-base">dark</span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- navabar end -->
+
+    <!-- wave top start -->
+    <div class="relative top-0">
+      <span class="absolute inline-block w-full">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#2dd4bf" fill-opacity="1" d="M0,160L40,170.7C80,181,160,203,240,192C320,181,400,139,480,112C560,85,640,75,720,90.7C800,107,880,149,960,149.3C1040,149,1120,107,1200,106.7C1280,107,1360,149,1400,170.7L1440,192L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+        </svg>
+      </span>
+    </div>
+    <!-- wave top end -->
+
+    <!-- home section start -->
+    <section id="home" class="pt-32 pb-64 dark:bg-dark md:pt-44 lg:pt-72">
+      <div class="container mx-auto">
+        <!-- <div class="flex flex-wrap"> -->
+        <div class="w-full text-center">
+          <h3 class="mb-2 text-xl font-semibold text-gray-600 dark:text-gray-200">Hello, I am</h3>
+          <h1 class="mx-auto mb-2 max-w-xl text-5xl font-extrabold text-dark dark:text-white">Muhammad Nur Auliady Pamungkas</h1>
+          <h3 class="mb-4 pb-2 text-xl font-semibold text-gray-600 dark:text-gray-200">Bachelor of Computer Science | Freelance Icon Designer</h3>
+          <!-- <a href="#contact" class="rounded-full bg-primary py-2 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-90">Conctact Me</a> -->
+          <a href="#about" class="rounded-lg bg-primary py-2 px-4 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-70">More About Me <span class="ml-2 inline-block h-4 w-4 rotate-45 border-r-4 border-b-4"></span></a>
+        </div>
+
+        <!-- <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="relative mt-10">
+              <img src="img/me.png" alt="profile" class="relative z-10 mx-auto max-w-full" />
+              <span class="absolute bottom-4 left-1/2 -translate-x-1/2">
+                <svg class="h-96 w-96" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#0369a1" d="M45.1,-59.7C59,-52,71.3,-39.6,74.5,-25.2C77.8,-10.9,72.1,5.3,64.1,18C56.1,30.7,45.8,39.8,34.8,40.8C23.7,41.7,11.9,34.5,-0.3,34.9C-12.4,35.3,-24.9,43.3,-34.5,41.9C-44.2,40.5,-51.1,29.7,-56.6,17.3C-62.1,5,-66.2,-8.9,-61.8,-19.4C-57.5,-29.9,-44.7,-36.9,-33,-45.3C-21.3,-53.8,-10.6,-63.6,2.5,-67C15.6,-70.5,31.2,-67.4,45.1,-59.7Z" transform="translate(100 100)" />
+                </svg>
+              </span>
+            </div>
+          </div> -->
+        <!-- </div> -->
+      </div>
+    </section>
+    <!-- home section end -->
+
+    <!-- about sectios start -->
+    <section id="about" class="bg-gray-100 pt-24 pb-12 dark:bg-gray-800">
+      <div class="container mx-auto">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-6 max-w-2xl text-center">
+            <h2 class="mb-4 text-3xl font-bold uppercase tracking-wide text-primary">About Me</h2>
+            <p class="text text-base font-medium text-dark dark:text-gray-200">Recent graduate with a degree in Computer Science. Have some experince in web development using Laravel, MySql, Rest API, Bootstrap, Tailwind, and JavaScript. Also have an interest in graphic design, especially in vector designs using Adobe Illustrator. Looking for opportunities as a web developer and ready to grow with the company</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about section end -->
+
+    <!-- resume sectios start -->
+    <section id="resume" class="bg-gray-50 pt-24 pb-12 dark:bg-dark">
+      <div class="container mx-auto">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-6 max-w-xl text-center">
+            <h2 class="mb-4 text-3xl font-bold uppercase tracking-wide text-primary">Resume</h2>
+            <p class="text-base font-medium text-cyan-600">Education and Experience</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="mb-10 w-full px-4 md:w-1/2">
+            <h3 class="text-lg font-semibold text-dark dark:text-white">Education</h3>
+            <div class="mb-2 w-full rounded-lg bg-primary p-4 dark:bg-secondary">
+              <h4 class="text-base font-semibold text-white">Bachelor Degree</h4>
+              <p class="text-base font-medium text-gray-50">Universitas Pendidikan Indonesia (2017 - 2022)</p>
+              <hr class="py-1" />
+              <p class="text-base font-medium text-gray-100">Bachelor of Computer Science</p>
+              <p class="text-base font-medium text-gray-100">GPA 3.65</p>
+            </div>
+          </div>
+          <div class="mb-10 w-full px-4 md:w-1/2">
+            <h3 class="text-lg font-semibold text-dark dark:text-white">Experience</h3>
+            <div class="w-full rounded-t-lg bg-primary p-4 dark:bg-secondary">
+              <h4 class="text-base font-semibold text-white">Freelance Icon Designer</h4>
+              <p class="text-base font-medium text-gray-50">November 2021 - present</p>
+              <hr class="py-1" />
+              <p class="text-base font-medium text-gray-100">Icon contributor for some icon marketplace</p>
+            </div>
+            <div class="w-full rounded-b-lg border-t-4 border-secondary bg-primary p-4 dark:border-primary dark:bg-secondary">
+              <h4 class="text-base font-semibold text-white">Web Developer Student Intern</h4>
+              <p class="text-base font-medium text-gray-50">Yayasan Kesehatan Telkom (September 2020 – November 2020)</p>
+              <hr class="py-1" />
+              <p class="text-base font-medium text-gray-100">Developing web-based helpdesk application using the Laravel framework and MySql database</p>
+              <hr class="py-1" />
+              <p class="text-base font-medium text-gray-100">Developing web-based Customer Satisfaction Index (CSI) applications using the Laravel framework, MySql database, and using the API as one of the data sources used in application development</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- resume section end -->
+
+    <!-- skill sectios start -->
+    <section id="skill" class="pt-24 pb-12 dark:bg-gray-800">
+      <div class="container mx-auto max-w-4xl">
+        <div class="mx-auto mb-6 max-w-xl text-center">
+          <h2 class="mb-4 text-3xl font-bold uppercase tracking-wide text-primary">Skill</h2>
+          <p class="text-base font-medium text-secondary">Here is a list of the programming language and technology that I'm familiar with.</p>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="mb-10 w-full px-4 text-center md:w-1/3">
+            <h3 class="text-lg font-semibold text-dark dark:text-gray-100">HTML</h3>
+            <ul>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+            </ul>
+
+            <h3 class="text-lg font-semibold text-dark dark:text-gray-100">Bootstrap</h3>
+            <ul>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+            </ul>
+            <h3 class="text-lg font-semibold text-dark dark:text-gray-100">Laravel</h3>
+            <ul>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+            </ul>
+            <h3 class="text-lg font-semibold text-dark dark:text-gray-100">MySql</h3>
+            <ul>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+            </ul>
+          </div>
+          <div class="mb-10 w-full px-4 text-center md:w-1/3">
+            <h3 class="text-lg font-semibold text-dark dark:text-gray-100">JavaScript</h3>
+            <ul>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+            </ul>
+
+            <h3 class="text-lg font-semibold text-dark dark:text-gray-100">Tailwind CSS</h3>
+            <ul>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+            </ul>
+            <h3 class="text-lg font-semibold text-dark dark:text-gray-100">C</h3>
+            <ul>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+            </ul>
+          </div>
+          <div class="mb-10 w-full px-4 text-center md:w-1/3">
+            <h3 class="text-lg font-semibold text-dark dark:text-gray-100">Rest API</h3>
+            <ul>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+            </ul>
+            <h3 class="text-lg font-semibold text-dark dark:text-gray-100">Git</h3>
+            <ul>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+            </ul>
+
+            <h3 class="text-lg font-semibold text-dark dark:text-gray-100">Java</h3>
+            <ul>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary bg-primary dark:border-gray-100 dark:bg-secondary"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+              <li class="mx-1 inline-block h-6 w-6 rounded-full border-2 border-secondary dark:border-gray-100"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skill section end -->
+
+    <!-- portofolio sectios start -->
+    <section id="portofolio" class="bg-dark pt-24 pb-12 dark:bg-gray-700">
+      <div class="container mx-auto">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-10 text-center">
+            <h2 class="mb-4 text-3xl font-bold uppercase tracking-wide text-primary">Portofolio</h2>
+            <div class="mx-auto max-w-xs flex-wrap">
+              <p class="text-md mb-4 font-medium text-secondary">Some things I have built</p>
+              <ul class="flex justify-around">
+                <li class="group">
+                  <a href="#programming" id="programming" class="mb-4 text-xl font-medium text-white underline underline-offset-8 transition duration-500">Programming</a>
+                </li>
+                <li class="group">
+                  <a href="#design" id="design" class="mb-4 text-xl font-medium text-gray-400 transition duration-500">Design</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="programming-part" class="flex flex-wrap">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="mb-10 overflow-hidden rounded-xl bg-gray-50 shadow-lg dark:bg-gray-600">
+              <img src="img/project 1/1.png" alt="" class="w-full" />
+              <div class="h-80 py-8 px-6">
+                <h3>
+                  <a class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white">Dashboard</a>
+                </h3>
+                <p class="mb-6 text-base font-medium text-dark dark:text-gray-100">Web-based dashboard application using Laravel 8, MySql, Bootstrap, JavaScript, jQuery, Chart.js and have forecasting menu using Moving Average and Exponential Moving Average</p>
+                <a href="#" class="rounded-md bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80">See More</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="mb-10 overflow-hidden rounded-xl bg-gray-50 shadow-lg dark:bg-gray-600">
+              <img src="img/project 2/1.png" alt="" class="w-full" />
+              <div class="h-80 py-8 px-6">
+                <h3>
+                  <a class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white">Calculator</a>
+                </h3>
+                <p class="mb-6 text-base font-medium text-dark dark:text-gray-100">Simple calculator using HTML, vanilla CSS, and vanilla JavaScript</p>
+                <a href="https://github.com/mnauliady/calculator" target="_blank" class="rounded-md bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80">See More</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="mb-10 overflow-hidden rounded-xl bg-gray-50 shadow-lg dark:bg-gray-600">
+              <img src="img/project 3/1.png" alt="" class="w-full" />
+              <div class="h-80 py-8 px-6">
+                <h3>
+                  <a class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white">Movie Catalogue</a>
+                </h3>
+                <p class="mb-6 text-base font-medium text-dark dark:text-gray-100">Website for showing a catalogue of movie, built using laravel 9, jQuery, tailwind CSS, and API from the www.themoviedb.org. The wbsite is display title, poster, release date, rating vote of the movie, and have live search feature.</p>
+                <a href="https://github.com/mnauliady/movie-catalogue" target="_blank" class="rounded-md bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80">See More</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full text-center">
+            <a href="https://github.com/mnauliady" target="_blank" class="text-xl font-bold text-white transition duration-300 ease-in-out hover:text-primary hover:underline hover:underline-offset-4">See More</a>
+          </div>
+        </div>
+        <div id="design-part" class="hidden">
+          <div class="w-full px-4">
+            <div class="flex flex-wrap items-center justify-center">
+              <a href="https://www.flaticon.com/authors/mnauliady" target="_blank" class="bg mx-4 max-w-[130px] py-4 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
+                <img src="img/flaticon.png" class="scale-150" alt="flaticon" />
+              </a>
+              <a href="https://www.canva.com/p/mnauliady/" target="_blank" class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
+                <img src="img/canva.svg" alt="canva" />
+              </a>
+              <a href="https://thenounproject.com/browse/creator/mnauliady/icon-collections/" target="_blank" class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
+                <img src="img/tnp.svg" alt="tnp" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- portofolio section end -->
+
+    <!-- Contact Section start -->
+    <section id="contact" class="pt-24 dark:bg-dark">
+      <div class="container mx-auto">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-6 max-w-xl text-center">
+            <h2 class="mb-4 text-3xl font-bold uppercase tracking-wide text-primary">Contact Me</h2>
+            <p class="text-base font-medium text-secondary">Get in Touch With Me</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="mb-12 w-full px-4 font-medium md:w-1/2">
+            <p class="mb-2 text-base font-medium text-dark dark:text-gray-100">If you have a question or just want to say hello, feel free to drop me a mail. I'll get back to you as soon as possible.</p>
+            <div class="flex flex-wrap">
+              <div class="my-2 w-1/6 px-2">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" class="m-auto scale-75 fill-primary">
+                  <g>
+                    <path
+                      d="M404.97,340.53C388.6,334.01,370.05,328.7,350,324.7c-3.46,6.49-6.91,12.63-10.29,18.38c21.29,3.88,40.87,9.27,57.87,16.04
+		c34.24,13.62,53.87,31.3,53.87,48.51s-19.63,34.89-53.87,48.51c-37.66,14.99-87.94,23.24-141.58,23.24
+		c-53.64,0-103.92-8.25-141.58-23.24c-34.24-13.62-53.87-31.3-53.87-48.51s19.63-34.89,53.87-48.51
+		c17-6.771,36.58-12.16,57.87-16.04c-3.38-5.75-6.83-11.89-10.29-18.38c-20.05,4-38.6,9.31-54.97,15.83
+		c-42.87,17.06-66.48,40.89-66.48,67.1s23.61,50.04,66.48,67.101C146.98,490.63,199.89,499.38,256,499.38
+		c56.11,0,109.02-8.75,148.97-24.649c42.87-17.061,66.48-40.891,66.48-67.101S447.84,357.59,404.97,340.53z"
+                    />
+                  </g>
+                  <path
+                    d="M342.08,43.25C319.28,23.5,288.71,12.62,256,12.62s-63.28,10.88-86.08,30.63c-25.91,22.45-39.61,54.31-39.61,92.14
+	c0,79.91,32.21,151.54,59.22,197.56c29.17,49.689,58,80.29,59.22,81.56c1.88,1.99,4.51,3.12,7.25,3.12s5.37-1.13,7.25-3.12
+	c1.22-1.27,30.05-31.87,59.22-81.56C349.48,286.93,381.69,215.3,381.69,135.39C381.69,97.56,367.99,65.7,342.08,43.25z M256,183.94
+	c-26.25,0-47.52-21.28-47.52-47.53c0-26.24,21.27-47.52,47.52-47.52s47.52,21.28,47.52,47.52
+	C303.52,162.66,282.25,183.94,256,183.94z"
+                  />
+                </svg>
+              </div>
+              <div class="my-auto w-5/6 px-2">
+                <h3 class="text-lg font-semibold text-dark dark:text-gray-100 md:text-base lg:text-lg">Location</h3>
+                <p class="text-base font-medium text-dark dark:text-gray-100">Bandung, Indonesia</p>
+              </div>
+              <div class="my-2 w-1/6 px-2">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" class="m-auto scale-75 fill-primary">
+                  <g>
+                    <path d="M186.98,256L22.44,386.09c-0.69-2.01-1.06-4.17-1.06-6.41V132.32c0-2.24,0.37-4.4,1.06-6.41L186.98,256z" />
+                    <path
+                      d="M308.89,268.75L474.1,399.37c-1.13,0.21-2.29,0.31-3.479,0.31H41.38c-1.19,0-2.35-0.1-3.48-0.31l165.21-130.62l46.67,36.9
+		c0.04,0.029,0.09,0.06,0.13,0.1c0.24,0.18,0.47,0.34,0.71,0.5c0.1,0.06,0.2,0.12,0.3,0.18c0.21,0.12,0.42,0.23,0.63,0.34
+		c0.09,0.04,0.18,0.091,0.27,0.131c0.62,0.29,1.27,0.51,1.92,0.659c0.07,0.011,0.14,0.03,0.2,0.04c0.27,0.061,0.55,0.101,0.82,0.141
+		c0.08,0.01,0.16,0.02,0.23,0.02c0.34,0.04,0.67,0.061,1,0.061c0.01,0,0.01,0,0.01,0s0,0,0.01,0c0.33,0,0.66-0.021,1-0.061
+		c0.07,0,0.15-0.01,0.23-0.02c0.27-0.04,0.55-0.08,0.819-0.141c0.061-0.01,0.131-0.029,0.2-0.04c0.65-0.149,1.29-0.369,1.92-0.659
+		c0.09-0.04,0.181-0.091,0.271-0.131c0.21-0.109,0.42-0.22,0.62-0.34c0.109-0.06,0.21-0.12,0.31-0.18c0.24-0.16,0.47-0.32,0.69-0.49
+		c0.05-0.04,0.109-0.069,0.16-0.109L308.89,268.75z"
+                    />
+                    <path d="M256,285.07L37.9,112.63c1.13-0.21,2.29-0.31,3.48-0.31h429.24c1.189,0,2.35,0.1,3.479,0.31L256,285.07z" />
+                    <path d="M490.62,132.32V379.68c0,2.24-0.37,4.4-1.061,6.41L325.02,256l164.54-130.09C490.25,127.92,490.62,130.08,490.62,132.32z" />
+                  </g>
+                </svg>
+              </div>
+              <div class="my-auto w-5/6 px-2">
+                <h3 class="text-lg font-semibold text-dark dark:text-gray-100 md:text-base lg:text-lg">Email</h3>
+                <p class="text-base font-medium text-dark dark:text-gray-100"><a href="mailto:mnauliady@gmail.com">mnauliady@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="w-full border-t-2 border-gray-600 pt-6">
+              <div class="mb-5 flex items-center justify-center">
+                <!-- Github -->
+                <a href="https://github.com/mnauliady" target="_blank" class="mr-3 flex h-11 w-11 items-center justify-center rounded-full border border-gray-600 hover:border-primary hover:bg-primary hover:text-white dark:text-gray-100">
+                  <svg class="fill-current" role="img" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>GitHub</title>
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                  </svg>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/mnauliady" target="_blank" class="mr-3 flex h-11 w-11 items-center justify-center rounded-full border border-gray-600 hover:border-primary hover:bg-primary hover:text-white dark:text-gray-100">
+                  <svg class="fill-current" role="img" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>LinkedIn</title>
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2">
+            <img src="img/contact-2.svg" class="-translate-y-16" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Start -->
+    <footer class="bg-dark pb-8 dark:bg-gray-800">
+      <div class="container mx-auto">
+        <div class="w-full pt-6">
+          <p class="text-center text-xs font-medium text-gray-100">
+            Made by Muhammad Nur Auliady Pamungkas using
+            <a href="https://tailwindcss.com" target="_blank" class="text-sky-500">Tailwind CSS</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Back to top Start -->
+    <a id="to-top" href="#home" class="fixed bottom-4 right-4 z-[9999] hidden h-14 w-14 items-center justify-center rounded-full bg-primary p-4 hover:animate-bounce">
+      <span class="mt-2 block h-5 w-5 rotate-45 border-t-4 border-l-4"></span>
+    </a>
+    <!-- Back to top End -->
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
